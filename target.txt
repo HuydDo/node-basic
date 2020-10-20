@@ -1,1 +1,10 @@
 Hi there from Node
+npm init (dexcription: A Node Js API, keyword: node api, author: Huy Do)
+npm install express
+touch app.js
+node app.js
+npm i nodemon
+
+npm run dev
+
+npm i morgan
