@@ -39,7 +39,6 @@ const fileName = 'target.txt'
 
 // const data = fs.readFileSync(fileName)
 // console.log(data.toString())
-
 // fs.watch(fileName, () => console.log(`File changed!`))
 
 const errHandler = err => console.log(err);
