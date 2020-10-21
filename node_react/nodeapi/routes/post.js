@@ -9,7 +9,6 @@ module.exports = router;
 
 
 // const getPosts = (req, res) => {
-
 // exports.getPosts = (req, res) => {
   // res.send("Hello world from node js")
 // }
