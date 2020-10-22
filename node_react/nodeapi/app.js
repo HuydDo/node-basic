@@ -1,6 +1,31 @@
 const express = require('express')
 const app = express();
+//import mongoose
+const mongoose = require('mongoose')
 const morgan = require("morgan");
+// load env variables
+const dotenv = require("dotenv");
+dotenv.config();
+
+
+
+// db
+// mongoose.connect(process.env.MONGO_URL)
+// .then(() => console.log('DB Connect'))
+
+
+ 
+//db connection
+//MONGO_URI=mongodb://localhost/nodeapi
+mongoose.connect(
+  process.env.MONGO_URI,
+  {useNewUrlParser: true}
+)
+.then(() => console.log('DB Connected'))
+ 
+mongoose.connection.on('error', err => {
+  console.log(`DB connection error: ${err.message}`)
+});
 
 //bring in routes
 // const postRoutes = require('./routes/post')
