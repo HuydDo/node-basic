@@ -18,7 +18,7 @@ dotenv.config();
 //db connection
 //MONGO_URI=mongodb://localhost/nodeapi
 mongoose.connect(
-  process.env.MONGO_URI,
+  process.env.MONGO_URL,
   {useNewUrlParser: true}
 )
 .then(() => console.log('DB Connected'))
