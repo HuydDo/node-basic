@@ -3,6 +3,7 @@ const app = express();
 //import mongoose
 const mongoose = require('mongoose')
 const morgan = require("morgan");
+const bodyParser = require('body-parser')
 // load env variables
 const dotenv = require("dotenv");
 dotenv.config();
@@ -41,13 +42,12 @@ const myOwnMiddleware = (req, res, next) =>{
 }
 
 //middleware 
-app.use(morgan("dev"))
+app.use(morgan("dev"));
+app.use(bodyParser.json());
 // app.use(myOwnMiddleware)
 
-
-
 // app.get("/", getPosts);
-app.use("/", postRoutes)
+app.use("/", postRoutes);
 
 
 const port = 8080
